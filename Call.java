@@ -5,15 +5,17 @@
 public class Call {
 	private int amt;
 	private int num;
+	private boolean dead;
 	
 	/**
 	 * This constructor sets the amt and num
 	 * @param amt the amount of die
 	 * @param num the die side
 	 */
-	public Call(int amt, int num){
+	public Call(int amt, int num, boolean b){
 		this.amt = amt;
 		this.num = num;
+		dead = b;
 	}
 	
 	/**
@@ -47,4 +49,5 @@ public class Call {
 	public int getNum(){
 		return this.num;
 	}
+	public boolean getDead() { return this.dead; }
 }

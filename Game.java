@@ -34,4 +34,30 @@ public class Game {
 	public void run(){
 		
 	}
+	// if the person who makes the call is correct then it will return true
+	public boolean compare(Call c){
+		numCall = 0;
+		for(int i = 0; i < players.length; i++){
+			for(int j = 0; j < players[i].getDiceAmt(); j++){
+				if(players[i].dieList[j] == c.getNum()){//if the number of the specific die is the same as the call
+					numCall++;
+					if(!c.getDead()){
+						if(numCall<= c.getAmt())
+							return false;
+					}
+					else{
+						if(numCall<c.getAmt())
+							return false;
+					}
+
+				}
+			}
+		}
+
+		if(numCall == c.getAmt())
+			return true;
+		else
+			return false;
+
+	}
 }
