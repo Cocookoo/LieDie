@@ -49,5 +49,6 @@ public class Call {
 	public int getNum(){
 		return this.num;
 	}
+
 	public boolean getDead() { return this.dead; }
 }
