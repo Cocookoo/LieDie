@@ -39,7 +39,8 @@ public class Game {
 		numCall = 0;
 		for(int i = 0; i < players.length; i++){
 			for(int j = 0; j < players[i].getDiceAmt(); j++){
-				if(players[i].dieList[j] == c.getNum()){//if the number of the specific die is the same as the call
+				dieList[] = players.getDieList();
+				if( dieList[j]== c.getNum()){//if the number of the specific die is the same as the call
 					numCall++;
 					if(!c.getDead()){
 						if(numCall<= c.getAmt())
