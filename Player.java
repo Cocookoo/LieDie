@@ -99,14 +99,14 @@ public class Player {
 	 * The player rolls the die that he/she has
 	 * @return a string that has the die rolls on it
 	 */
-	public int[] roll(){
-		int[] playerRoll = new int[this.getAmtDie()];
+	public void roll(){
+
 		for(int i = 0; i < this.getAmtDie(); i++){
 			Die d = dieList.get(i);
 			d.roll();
-			playerRoll= d.getNum() ;
+			dieList.set(i,d);
 		}
-		return playerRoll;
+
 	}
 	/**
 	 * Returns the list of die (Used by the game to count the number of die)
