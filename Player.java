@@ -99,17 +99,12 @@ public class Player {
 	 * The player rolls the die that he/she has
 	 * @return a string that has the die rolls on it
 	 */
-	public String roll(){
-		String playerRoll = "[";
-		for(int i = 0; i < getAmtDie(); i++){
+	public int[] roll(){
+		int[] playerRoll = new int[this.getAmtDie()];
+		for(int i = 0; i < this.getAmtDie(); i++){
 			Die d = dieList.get(i);
 			d.roll();
-			if(i != getAmtDie()-1){
-				playerRoll+= d.getNum() + ", ";	
-			}
-			else{
-				playerRoll+= d.getNum() + "]";
-			}
+			playerRoll= d.getNum() ;
 		}
 		return playerRoll;
 	}
