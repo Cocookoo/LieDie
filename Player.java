@@ -76,7 +76,7 @@ public class Player {
 			}
 		}
 		in.close();
-		return (new Call(amount, side));
+		return (new Call(amount, side, dead));
 	}
 	
 	/**

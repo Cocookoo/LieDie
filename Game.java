@@ -36,10 +36,13 @@ public class Game {
 	}
 	// if the person who makes the call is correct then it will return true
 	public boolean compare(Call c){
-		numCall = 0;
-		for(int i = 0; i < players.length; i++){
+		//running total of the die that was called
+		int numCall = 0;
+		//loop through each player
+		for(int i = 0; i < players.size(); i++){
+			//look through each players dice count?
+			ArrayList<Die> dieList = players[i].getDieList();
 			for(int j = 0; j < players[i].getDiceAmt(); j++){
-				dieList[] = players.getDieList();
 				if( dieList[j]== c.getNum()){//if the number of the specific die is the same as the call
 					numCall++;
 					if(!c.getDead()){
