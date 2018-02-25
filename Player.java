@@ -32,12 +32,12 @@ public class Player {
 		String choice = "";
 		System.out.println("Would you like to call the player out? (Y,N, or D)");
 		Scanner in = new Scanner(System.in);
-		while(!choice.equals("Y") || !choice.equals("N") || !choice.equals("D")){
+		while(!choice.equals("Y") || !choice.equals("N")){
 			try{
 				choice = in.next();
 			}
 			catch(InputMismatchException e){
-				System.out.println("Invalid input. Please reenter \"Y\",\"N\", or \"D\":");
+				System.out.println("Invalid input. Please reenter \"Y\" or \"N\":");
 			}
 		}
 		in.close();
@@ -76,7 +76,7 @@ public class Player {
 			}
 		}
 		in.close();
-		return (new Call(amount, side, dead));
+		return (new Call(amount, side));
 	}
 	
 	/**
